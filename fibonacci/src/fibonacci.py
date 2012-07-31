@@ -12,10 +12,10 @@ if __name__ == "__main__":
     b = 0   #   n - 1
     a = 0   #   n - 2
     
-    print(0)
-    print(1)
+    print(0),
+    print(1),
     
-    for a in range(100):
+    for x in range(100):
         a = b
         b = c
         c = add(a,b)
