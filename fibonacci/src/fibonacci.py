@@ -9,25 +9,22 @@ from array import *
 fibonacciNumbers = array('l')
 
 def add(a,b):
+    #   simply return a sum of two numbers
     return a + b
 
 def buildCache(maximum):
-    c = 1   #   n (current number)
-    b = 0   #   n - 1
-    a = 0   #   n - 2
-    
     #   Manually insert the first two numbers
     fibonacciNumbers.append(0)
     fibonacciNumbers.append(1)
     
-    for x in range(maximum-2):
-        a = b
-        b = c
-        c = add(a,b)
+    for x in range(1,maximum):
+        #   Next number will be the sum of the two numbers
+        #   currently at the end of the list
+        c = add(fibonacciNumbers[x-1],fibonacciNumbers[x])
         fibonacciNumbers.append(c)
-        #print(c),
 
 def printCache():
+    #   Dump contents of cache to console
     for x in fibonacciNumbers:
         print(x),
 
