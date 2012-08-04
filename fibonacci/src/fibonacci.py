@@ -26,9 +26,14 @@ def buildCache(maximum):
 
 def printCache():
     #   Dump contents of cache to console
-    for x in fibonacciNumbers:
-        print(x),
+    for x in range(0,len(fibonacciNumbers)):
+        print x, fibonacciNumbers[x]
+
+def startup():
+    print "Building cache"
+    buildCache(70)
+    print "Done"
 
 if __name__ == "__main__":
-    buildCache(50)
+    startup()
     printCache()
