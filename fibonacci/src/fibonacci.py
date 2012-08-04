@@ -6,6 +6,7 @@ __date__ ="$31-Jul-2012 23:54:11$"
 
 from array import *
 
+#   create an array of 4 byte long positive integers
 fibonacciNumbers = array('l')
 
 def add(a,b):
