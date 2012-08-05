@@ -22,16 +22,20 @@ def buildCache(maximum):
         c = add(fibonacciNumbers[x-1],fibonacciNumbers[x])
         fibonacciNumbers.append(c)
 
+def printNumber(index):
+    #   Print the number with a specific index in the sequence
+    print index, fibonacciNumbers[index]
+
 def printCache():
     #   Dump contents of cache to console
     for x in range(0,len(fibonacciNumbers)):
-        print x, fibonacciNumbers[x]
+        printNumber(x)
 
 def startup():
     print "Building cache"
-    buildCache(120)
+    buildCache(100000)
     print "Done"
 
 if __name__ == "__main__":
     startup()
-    printCache()
+    printNumber(100000)
