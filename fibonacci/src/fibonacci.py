@@ -4,10 +4,8 @@
 __author__="dean"
 __date__ ="$31-Jul-2012 23:54:11$"
 
-from array import *
-
-#   create an array of 4 byte long positive integers
-fibonacciNumbers = array('l')
+#   create a list to hold cache
+fibonacciNumbers = []
 
 def add(a,b):
     #   simply return a sum of two numbers
@@ -31,7 +29,7 @@ def printCache():
 
 def startup():
     print "Building cache"
-    buildCache(70)
+    buildCache(120)
     print "Done"
 
 if __name__ == "__main__":
